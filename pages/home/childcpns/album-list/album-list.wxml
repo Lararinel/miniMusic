@@ -1,0 +1,12 @@
+<!--pages/home/childcpns/album-list/album-list.wxml-->
+<view class="album">
+  <block wx:for="{{albums}}" wx:key="index">
+    <view class="album-item">
+      <image src="{{item.picUrl}}" class="album-img"></image>
+      <view class="item-title">
+        <view><text class="item-name">{{item.name}}</text></view>
+        <view><text class="item-company">{{item.company? item.company: '无'}}</text></view>
+      </view>
+    </view>
+  </block>
+</view>

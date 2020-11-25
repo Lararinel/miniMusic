@@ -1,0 +1,29 @@
+<!--pages/home/home.wxml-->
+<!-- 轮播图区域 -->
+<scroll-view
+  bind:scroll="onScroll"
+  scroll-y
+  id="scroller"
+  style="height: {{windowHeight}};"
+>
+<img-swiper images="{{banners}}" />
+<!-- 推荐列表 -->
+<recommend-list recommends="{{recommends}}" />
+<!-- 专辑列表 -->
+<album-list albums="{{albums}}" />
+
+<!-- 精品歌单 -->
+<view>
+  <view class="songsList">
+    <view class="songsTitle"><text>精 品 歌 单</text></view>
+    <!-- 歌单分类tags -->
+    <van-sticky scroll-top="{{ scrollTop }}" offset-top="{{ offsetTop }}">
+      <songlist-tags tags="{{tags}}" id="tabControl" />
+    </van-sticky>
+    <!-- 歌单列表 -->
+    <song-lists songLists="{{songLists}}"/>
+  </view>
+</view>
+<!-- 返回顶部按钮 -->
+<back-top wx:if="{{showBackTop}}" bind:tap="handleBackTop"/>
+</scroll-view>

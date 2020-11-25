@@ -1,0 +1,23 @@
+/* pages/home/childcpns/songlist-tags/songlist-tags.wxss */
+.tags {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0rpx;
+  margin-bottom: 40rpx;
+  background-color: #fff;
+}
+.tag-item {
+  flex: 1;
+  color: #f55777;
+  font-size: 24rpx;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.tag-item .tagName {
+  padding: 4rpx;
+}
+.tag-item .active {
+  border-bottom: 4rpx solid #f55777;
+}

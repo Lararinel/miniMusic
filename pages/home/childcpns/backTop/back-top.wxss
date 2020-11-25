@@ -1,0 +1,10 @@
+/* pages/home/childcpns/backTop/back-top.wxss */
+.backTop {
+  position: fixed;
+  right: 16rpx;
+  bottom: 10rpx;
+}
+.backTopIcon {
+  width: 90rpx;
+  height: 90rpx;
+}

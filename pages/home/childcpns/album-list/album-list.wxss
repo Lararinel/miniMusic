@@ -1,0 +1,36 @@
+/* pages/home/childcpns/album-list/album-list.wxss */
+.album {
+  display: flex;
+  width: 100%;
+  margin-top: 40rpx;
+}
+.album-item {
+  /* flex: 1; */
+  width: 20%;
+  padding-right: 10rpx;
+  box-sizing: border-box;
+  text-align: center;
+}
+.album-item:last-child {
+  padding-right: 0;
+  box-sizing: border-box;
+}
+.album-img {
+  width: 140rpx;
+  height: 140rpx;
+  
+}
+.item-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.item-name {
+  color: #f55777;
+  font-weight: 700;
+  font-size: 20rpx;
+}
+.item-company {
+  font-size: 16rpx;
+  color: #000;
+}

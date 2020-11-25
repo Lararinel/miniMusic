@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "img-swiper": "/components/swiper/swiper",
+    "recommend-list": "./childcpns/recommend-list/recommend-list",
+    "album-list": "./childcpns/album-list/album-list",
+    "songlist-tags": "./childcpns/songlist-tags/songlist-tags",
+    "song-lists": "./childcpns/song-lists/song-lists",
+    "back-top": "./childcpns/backTop/back-top"
+  },
+  "navigationBarTitleText": "音乐"
+}

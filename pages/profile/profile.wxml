@@ -1,0 +1,4 @@
+<!--pages/profile/profile.wxml-->
+<view>
+  <navigator url="/pages/login/login">登录</navigator>
+</view>

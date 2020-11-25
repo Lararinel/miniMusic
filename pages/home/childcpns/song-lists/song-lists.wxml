@@ -1,0 +1,9 @@
+<!--pages/home/childcpns/song-lists/song-list.wxml-->
+<view class="songLists">
+  <block wx:for="{{songLists}}" wx:key="index">
+    <view class="list-item">
+      <image src="{{item.coverImgUrl}}" class="itemImg"/>
+      <view><text class="itemDesc">{{item.name}}</text></view>
+    </view>
+  </block>
+</view>

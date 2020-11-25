@@ -1,0 +1,4 @@
+<!--pages/home/childcpns/backTop/back-top.wxml-->
+<view class="backTop">
+  <image src="../../../../assets/images/home/top.png" class="backTopIcon"/>
+</view>

@@ -1,0 +1,44 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+  <view class="loginContainer">
+    <view class="navs-bar">
+      <view class="phoneLogin {{loginWay ? 'active' : ''}}" bindtap="handlePhone"><text>手机登录</text></view>
+      <view class="emailLogin {{loginWay ? '' : 'active'}}" bindtap="handleEmail"><text>邮箱登录</text></view>
+    </view>
+
+    <view class="content-container">
+      <form class="login-content" bindsubmit="login">
+        <!-- 手机登录 -->
+        <view class="content-item {{loginWay ? 'activeContent' : ''}}">
+          <view class="input-item">
+            <view class="title">手机号码：</view>
+            <input type="number" name="phone" placeholder="请输入手机号" placeholder-style="color: #fff;" model:value="{{phone}}"/>
+          </view>
+          <view class="input-item">
+            <view class="title">密码：</view>
+            <input type="password" name="password" placeholder="请输入密码" placeholder-style="color: #fff;" model:value="{{password}}"/>
+          </view>
+        </view>
+        <!-- 邮箱登录 -->
+        <view class="content-item {{loginWay ? '' : 'activeContent'}}">
+          <view class="input-item">
+            <view class="title">邮箱：</view>
+            <input type="text" name="email" placeholder="请输入邮箱" placeholder-style="color: #fff;" model:value="{{email}}"/>
+          </view>
+          <view class=" input-item">
+            <view class="title">密码：</view>
+            <input type="password" name="password" placeholder="请输入密码" placeholder-style="color: #fff;" model:value="{{password}}"/>
+          </view>
+        </view>
+        <button class=" loginBtn" form-type="submit">登录</button>
+      </form>
+      <!-- 注册 -->
+      <view class="register-container">
+        <text>还没有账号？</text>
+        <navigator url="" id="register">注册账号></navigator>
+      </view>
+    </view>
+  </view>
+  <!-- 错误提示toast -->
+  <van-toast id="van-toast" />
+</view>

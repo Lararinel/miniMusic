@@ -1,0 +1,10 @@
+/* pages/home/home.wxss */
+.songsTitle {
+  width: 100%;
+  background-color: #f55777;
+  margin-top: 40rpx;
+  border-radius: 60rpx;
+  text-align: center;
+  color: #fff;
+  padding: 4rpx 0;
+}

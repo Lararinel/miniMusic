@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/discovery/discovery",
+    "pages/radio/radio",
+    "pages/profile/profile",
+    "pages/login/login"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ff5777",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "音乐"
+  },
+  "tabBar": {
+    "selectedColor": "#ff5777",
+    "list": [
+    {
+      "pagePath": "pages/home/home",
+      "text": "首页",
+      "iconPath": "/assets/images/tabbar/home.png",
+      "selectedIconPath": "/assets/images/tabbar/home_active.png"
+    },
+    {
+      "pagePath": "pages/discovery/discovery",
+      "text": "发现",
+      "iconPath": "/assets/images/tabbar/discovery.png",
+      "selectedIconPath": "/assets/images/tabbar/discovery_active.png"
+    },
+    {
+      "pagePath": "pages/radio/radio",
+      "text": "电台",
+      "iconPath": "/assets/images/tabbar/radio.png",
+      "selectedIconPath": "/assets/images/tabbar/radio_active.png"
+    },
+    {
+      "pagePath": "pages/profile/profile",
+      "text": "个人中心",
+      "iconPath": "/assets/images/tabbar/profile.png",
+      "selectedIconPath": "/assets/images/tabbar/profile_active.png"
+    }
+  ]
+  },
+  "usingComponents": {
+    "van-toast": "@vant/weapp/toast/index",
+    "van-sticky": "@vant/weapp/sticky/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}
