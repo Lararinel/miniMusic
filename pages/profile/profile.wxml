@@ -1,4 +1,36 @@
 <!--pages/profile/profile.wxml-->
-<view>
-  <navigator url="/pages/login/login">登录</navigator>
+<view class="profile">
+  <view class="container" wx:if="{userInfo}">
+      <view class="userInfo" style="background-image: url({{userInfo.profile.backgroundUrl}})">
+        <view class="left">
+          <view class="avatar">
+            <image src="{{userInfo.profile.avatarUrl}}" class="userAvatar"/>
+          </view>
+          <view class="name">
+            <text>Lira_cany</text>
+          </view>
+          <view class="fans">
+            <text class="desc">关注 11</text>|
+            <text class="desc">粉丝 21</text>
+          </view>
+          <view class="more">
+            <view class="more-item vip">黑胶CNIP</view>
+            <view class="more-item age">90后</view>
+            <view class="more-item rank">Lv.8</view>
+          </view>
+        </view>
+        <view class="right">
+          <button size="mini">编辑</button>
+          <button size="mini">更换背景</button>
+        </view>
+      </view>
+  </view>
+
+  <!-- 无用户信息时显示登录 -->
+  <view wx:else class="noInfo-container">
+    123
+  </view>
 </view>
+
+<navigator url="/pages/login/login">登录</navigator>
+<text wx:if="{{userInfo}}">{{userInfo.profile.userId}}</text>

@@ -3,14 +3,15 @@ const app = getApp();
 
 Page({
   data: {
-    userInfo: {}, //用户信息
+    userInfo: null, //用户信息
   },
   onLoad() {
-    if(app.globalData.userInfo) {
+    const userInfo = wx.getStorageSync('userInfo');
+    if(userInfo) {
       this.setData({
-        userInfo: app.globalData.userInfo
+        userInfo
       })
     }
-    console.log(userInfo)
+    console.log(userInfo);
   }
 })

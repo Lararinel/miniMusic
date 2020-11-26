@@ -1,1 +1,69 @@
 /* pages/profile/profile.wxss */
+.profile {
+  width: 100vw;
+  height: 100vh;
+}
+.profile .container .userInfo {
+  width: 100%;
+  height: 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  
+}
+/* 背景图蒙层 */
+.profile .container .userInfo::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, .2);
+}
+.userInfo .left {
+  z-index: 100;
+  color: #fff;
+  margin-top: 140rpx;
+  text-align: left;
+}
+.left .avatar {
+  width: 120rpx;
+  height: 120rpx;
+}
+.avatar .userAvatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.left .name {
+  font-size: 32rpx;
+  /* font-weight: 600; */
+  margin-top: 20rpx;
+}
+.left .fans {
+  font-size: 22rpx;
+  color: #ddd;
+  margin-top: 20rpx;
+}
+.left .fans .desc {
+  padding: 0 20rpx;
+}
+.left .fans :first-child {
+  padding-left: 0;
+}
+.left .more {
+  display: flex;
+  font-size: 20rpx;
+  margin-top: 20rpx;
+}
+.left .more .vip {
+  padding: 8rpx;
+  box-sizing: border-box;
+  background: #000;
+  border-radius: 30rpx;
+}
