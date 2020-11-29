@@ -1,36 +1,84 @@
 <!--pages/profile/profile.wxml-->
 <view class="profile">
   <view class="container" wx:if="{userInfo}">
-      <view class="userInfo" style="background-image: url({{userInfo.profile.backgroundUrl}})">
-        <view class="left">
-          <view class="avatar">
-            <image src="{{userInfo.profile.avatarUrl}}" class="userAvatar"/>
-          </view>
-          <view class="name">
-            <text>Lira_cany</text>
-          </view>
-          <view class="fans">
-            <text class="desc">关注 11</text>|
-            <text class="desc">粉丝 21</text>
-          </view>
-          <view class="more">
-            <view class="more-item vip">黑胶CNIP</view>
-            <view class="more-item age">90后</view>
-            <view class="more-item rank">Lv.8</view>
-          </view>
+    <view class="userInfo" style="background-image: url({{userInfo.profile.backgroundUrl}})">
+      <view class="left">
+        <view class="avatar">
+          <image src="{{userInfo.profile.avatarUrl}}" class="userAvatar" />
         </view>
-        <view class="right">
-          <button size="mini">编辑</button>
-          <button size="mini">更换背景</button>
+        <view class="name">
+          <text>{{userInfo.profile.nickname}}</text>
+        </view>
+        <view class="fans">
+          <text class="desc">关注 {{userInfo.profile.follows}}</text>|
+          <text class="desc">粉丝 {{userInfo.profile.followeds}}</text>
+        </view>
+        <view class="more">
+          <view class="more-item vip">黑胶CNIP</view>
+          <view class="more-item age {{userInfo.profile.gender === 2 ? 'female' : 'male'}}">{{age}}</view>
+          <view class="more-item rank">Lv.{{userInfo.profile.eventCount}}</view>
         </view>
       </view>
+      <view class="right">
+        <view class="handle">编辑</view>
+        <view class="handle">更换背景</view>
+      </view>
+    </view>
+    <!-- 用户主页/动态 -->
+    <view class="dynamic-container">
+      <van-tabs sticky class="tabs" border swipeable title-active-color="#ee0a24">
+        <!-- 主页 -->
+        <van-tab title="主页" class="tab home" name="home">
+          <!-- 听歌排行 -->
+          <view class="tab-home-container">
+            <view class="likedSongs">
+              <view class='item'>
+                <view class="icon">
+                  <image class="img" src="../../assets/images/profile/songsRank.png" />
+                </view>
+                <view class="title-container">
+                  <view class="title">听歌排行</view>
+                  <view class="numbers">累计听歌4500首</view>
+                </view>
+              </view>
+              <view class='item'>
+                <view class="icon">
+                  <image class="img" src="../../assets/images/profile/likeSongs.png" />
+                </view>
+                <view class="title-container">
+                  <view class="title">我喜欢的音乐</view>
+                  <view class="numbers">141首，播放343次</view>
+                </view>
+              </view>
+            </view>
+            <!-- 电台 -->
+            <view class="radio-container">
+              <view class="title-container">
+                <text class="title">电台</text>
+                <text class="numbers">（1个，被10人订阅）</text>
+              </view>
+              <view class="detail">
+                <view class="radio-cover">
+                  <image class="img" src="../../assets/images/profile/userRadio.png" />
+                </view>
+                <view class="desc">
+                  <view class="radioName">
+                    <text class="category">音乐故事</text>
+                    <text class="name">玲希音乐故事</text>
+                  </view>
+                  <view class="subs">共0期，10人订阅</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </van-tab>
+        <van-tab title="动态" class="tab dynamic" name="dynamic" info="8">内容 2</van-tab>
+      </van-tabs>
+    </view>
   </view>
 
   <!-- 无用户信息时显示登录 -->
   <view wx:else class="noInfo-container">
-    123
+    <navigator url="/pages/login/login">登录</navigator>
   </view>
 </view>
-
-<navigator url="/pages/login/login">登录</navigator>
-<text wx:if="{{userInfo}}">{{userInfo.profile.userId}}</text>

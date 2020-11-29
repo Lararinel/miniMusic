@@ -1,5 +1,5 @@
 <!--pages/login/login.wxml-->
-<view class="container">
+<view class="login-container">
   <view class="loginContainer">
     <view class="navs-bar">
       <view class="phoneLogin {{loginWay ? 'active' : ''}}" bindtap="handlePhone"><text>手机登录</text></view>
