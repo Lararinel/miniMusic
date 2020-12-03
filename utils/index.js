@@ -1,7 +1,7 @@
 // 计算年龄：几零后
 export function computeAge(birthday) {
   const date = new Date(birthday).getFullYear();
-  console.log(date);
+  // console.log(date);
   if(2010 <= date && date < 2020) {
     return '10后'
   } 

@@ -1,0 +1,11 @@
+<!--pages/profile/childcpns/songList.wxml-->
+<!-- 歌曲item -->
+<view class="songList">
+  <view class="imgContainer">
+    <image class="img" src="{{imgSrc}}"/>
+  </view>
+  <view class="textContainer">
+    <view class="title">荏苒冬春去</view>
+    <view class="desc">31首，播放96次</view>
+  </view>
+</view>

@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "songList": "./childcpns/songList/songList"
+  },
   "navigationBarTitleText": "个人中心"
 }

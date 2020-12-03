@@ -29,8 +29,8 @@
       <van-tabs sticky class="tabs" border swipeable title-active-color="#ee0a24">
         <!-- 主页 -->
         <van-tab title="主页" class="tab home" name="home">
-          <!-- 听歌排行 -->
           <view class="tab-home-container">
+            <!-- 听歌排行 -->
             <view class="likedSongs">
               <view class='item'>
                 <view class="icon">
@@ -70,6 +70,7 @@
                 </view>
               </view>
             </view>
+            <songList imgSrc="https://p1.music.126.net/YZH-3dAo_f_j1qgleqNh3w==/1374389547611215.jpg"/>
           </view>
         </van-tab>
         <van-tab title="动态" class="tab dynamic" name="dynamic" info="8">内容 2</van-tab>

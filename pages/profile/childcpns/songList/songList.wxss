@@ -1,0 +1,21 @@
+/* pages/profile/childcpns/songList.wxss */
+.songList {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+}
+.songList .imgContainer {
+  width: 80rpx;
+  height: 80rpx;
+}
+.songList .imgContainer .img {
+  width: 100%;
+  height: 100%;
+}
+.songList .textContainer .title {
+  font-size: 32rpx;
+}
+.songList .textContainer .desc {
+  font-size: 24rpx;
+  color: #999;
+}
