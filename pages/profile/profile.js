@@ -11,6 +11,8 @@ Page({
   data: {
     userInfo: null, //用户信息
     age: '', //用户年龄（几零后）
+    collectSongLists: [],  //用户收藏的歌单
+    createSongLists: [],   //用户创建的歌单
   },
   onLoad() {
     const userInfo = wx.getStorageSync('userInfo');
@@ -25,7 +27,7 @@ Page({
   async _getData() {
     this.getAge();
     this.getRadio();
-    this.getUserSongLists(2);
+    this.getUserSongLists();
   },
   // 获取年龄：几零后
   getAge() {
@@ -53,18 +55,34 @@ Page({
       console.log('未获取到用户信息');
     }
   },
-  async getUserSongLists(page=1) {
+  async getUserSongLists(page = 1) {
     try {
-      const {account} = this.data.userInfo || {};
-      const {id} = account || {};
+      const {
+        account
+      } = this.data.userInfo || {};
+      const {
+        id
+      } = account || {};
       const userSongLists = await getUserSongLists(id, {
-        limit:15,
-        offset:page,
-      }); 
-      
-
-      console.log(userSongLists);
-    } catch(error) {
+        limit: 30,
+        offset: page,
+      });
+      // 假设coverImgId_str字段存在则表示为收藏的歌单,不存在则为用户创建的歌单
+      const collectSongLists = [];
+      const createSongLists = [];
+      userSongLists.playlist.forEach((list)=> {
+        if(list.coverImgId_str) {
+          collectSongLists.push(list);
+        } else {
+          createSongLists.push(list);
+        }
+      })
+      this.setData({
+        collectSongLists,
+        createSongLists
+      })
+      console.log(createSongLists)
+    } catch (error) {
 
     }
   }

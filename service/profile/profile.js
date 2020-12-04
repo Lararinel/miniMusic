@@ -7,9 +7,8 @@ export function getUserRadio (id) {
   })
 }
 
-// 获取用户歌单
 /**
- * 
+ * 获取用户歌单
  * @param {string} id uid
  * @param {*} params limit,offset
  */

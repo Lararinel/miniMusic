@@ -95,8 +95,8 @@
 .userInfo .right {
   z-index: 100;
   position: absolute;
-  right: 20rpx;
-  bottom: 160rpx;
+  right: 40rpx;
+  bottom: 170rpx;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -194,4 +194,44 @@
   font-size: 24rpx;
   color: #999;
   margin-top: 10rpx;
+}
+.dynamic-container .tab-home-container .songLists {
+  margin-top: 40rpx;
+  position: relative;
+}
+.dynamic-container .tab-home-container .songLists .list-container {
+  height: 830rpx;
+  overflow: hidden;
+}
+.dynamic-container .tab-home-container .songLists .title-container {
+  margin-bottom: 30rpx;
+}
+.dynamic-container .tab-home-container .songLists .title-container .title {
+  font-size: 32rpx;
+  font-weight: 600;
+}
+.dynamic-container .tab-home-container .songLists .title-container .numbers {
+  font-size: 24rpx;
+  color: #999;
+  margin-left: 10rpx;
+}
+.dynamic-container .tab-home-container .songLists .list-container .list-item .noListsContainer {
+  display: flex;
+  font-size: 26rpx;
+}
+.dynamic-container .tab-home-container .songLists .list-container .list-item .noListsContainer .title {
+  color: #999;
+}
+.dynamic-container .tab-home-container .create .list-container .list-item .noListsContainer .addCreateList {
+  color: #ee0a24;
+  border: 1px solid #ee0a24;
+  border-radius: 6rpx;
+  margin-left: 40rpx;
+}
+.dynamic-container .tab-home-container .songLists .moreLists {
+  position: absolute;
+  background: #fff;
+  border-radius: 10rpx;
+  top: 5rpx;
+  right: 20rpx;
 }

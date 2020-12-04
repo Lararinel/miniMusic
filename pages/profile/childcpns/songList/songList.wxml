@@ -5,7 +5,7 @@
     <image class="img" src="{{imgSrc}}"/>
   </view>
   <view class="textContainer">
-    <view class="title">荏苒冬春去</view>
-    <view class="desc">31首，播放96次</view>
+    <view class="title">{{name}}</view>
+    <view class="desc">{{trackCount}}首，播放{{playCount}}次</view>
   </view>
 </view>

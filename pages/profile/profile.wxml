@@ -70,7 +70,43 @@
                 </view>
               </view>
             </view>
-            <songList imgSrc="https://p1.music.126.net/YZH-3dAo_f_j1qgleqNh3w==/1374389547611215.jpg"/>
+            <!-- 创建的歌单 -->
+            <view class="songLists create">
+              <view class="title-container">
+                <text class="title">创建的歌单</text>
+                <text class="numbers">({{createSongLists.length}}个，被收藏3次)</text>
+              </view>
+              <view class="list-container">
+                <view class="list-item">
+                  <block wx:if="{{createSongLists.length && createSongLists.length >= 0}}">
+                    <songList wx:for="{{createSongLists}}" wx:key="id" imgSrc="{{item.coverImgUrl}}" name="{{item.name}}" playCount="{{item.playCount}}" trackCount="{{item.trackCount}}"/>
+                  </block>
+                  <view class="noListsContainer" wx:else>
+                    <view class="title">无创建的歌单</view>
+                    <view class="addCreateList">+新建歌单</view>
+                  </view>
+                </view>
+              </view>
+              <button size="mini" class="moreLists">更多歌单</button>
+            </view>
+            <!-- 收藏的歌单 -->
+            <view class="songLists collect">
+              <view class="title-container">
+                <text class="title">收藏的歌单</text>
+                <text class="numbers">({{collectSongLists.length}}个，被收藏0次)</text>
+              </view>
+              <view class="list-container">
+                <view class="list-item">
+                  <block wx:if="{{collectSongLists.length && collectSongLists.length >= 0}}">
+                    <songList wx:for="{{collectSongLists}}" wx:key="id" imgSrc="{{item.coverImgUrl}}" name="{{item.name}}" playCount="{{item.playCount}}" trackCount="{{item.trackCount}}"/>
+                  </block>
+                  <view class="noListsContainer" wx:else>
+                    <view class="title">无收藏的歌单</view>
+                  </view>
+                </view>
+              </view>
+              <button class="moreLists">更多歌单</button>
+            </view>
           </view>
         </van-tab>
         <van-tab title="动态" class="tab dynamic" name="dynamic" info="8">内容 2</van-tab>

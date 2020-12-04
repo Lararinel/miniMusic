@@ -7,6 +7,18 @@ Component({
     imgSrc: {
       type: String,
       value: ''
+    },
+    name: {
+      type: String,
+      value: ''
+    },
+    playCount: {
+      type: Number,
+      value: null
+    },
+    trackCount: {
+      type: Number,
+      value: null
     }
   },
 
