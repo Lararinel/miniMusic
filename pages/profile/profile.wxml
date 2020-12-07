@@ -87,7 +87,7 @@
                   </view>
                 </view>
               </view>
-              <button size="mini" class="moreLists">更多歌单</button>
+              <view class="moreLists" wx:if="{{createSongLists.length && createSongLists.length > 7}}">更多歌单</view>
             </view>
             <!-- 收藏的歌单 -->
             <view class="songLists collect">
@@ -105,7 +105,7 @@
                   </view>
                 </view>
               </view>
-              <button class="moreLists">更多歌单</button>
+              <view class="moreLists" wx:if="{{collectSongLists.length && collectSongLists.length > 7}}">更多歌单</view>
             </view>
           </view>
         </van-tab>

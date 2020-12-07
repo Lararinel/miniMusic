@@ -231,7 +231,11 @@
 .dynamic-container .tab-home-container .songLists .moreLists {
   position: absolute;
   background: #fff;
-  border-radius: 10rpx;
+  border-radius: 20rpx;
+  border: 1px solid #ddd;
+  font-size: 20rpx;
+  box-sizing: border-box;
+  padding: 6rpx 8rpx;
   top: 5rpx;
   right: 20rpx;
 }
