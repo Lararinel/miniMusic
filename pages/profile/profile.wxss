@@ -12,12 +12,11 @@
   position: relative;
   width: 100%;
   height: 50vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  max-height: 460rpx;
+  display: flex;
 }
 /* 背景图蒙层 */
-.profile .container .userInfo::after {
+.profile .container .userInfo .modal{
   content: '';
   display: block;
   position: absolute;
@@ -26,17 +25,21 @@
   height: 100%;
   left: 0;
   top: 0;
-  background: rgba(0, 0, 0, .3);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.7);
 }
 
 .userInfoPanel{
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  transform:translateY(15vh);
+  transform:translateY(-80rpx);
   padding:0 40rpx;
   position: relative;
   z-index: 9;
+  flex:1;
 }
 
 .userInfo .left {
@@ -208,11 +211,11 @@
   margin-top: 10rpx;
 }
 .dynamic-container .tab-home-container .songLists {
-  margin-top: 40rpx;
+  margin-top: 30rpx;
   position: relative;
 }
 .dynamic-container .tab-home-container .songLists .list-container {
-  height: 830rpx;
+  /* height: 830rpx; */
   overflow: hidden;
 }
 .dynamic-container .tab-home-container .songLists .title-container {

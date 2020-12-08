@@ -1,7 +1,7 @@
 <!--pages/profile/profile.wxml-->
 <view class="profile">
-  <view class="container" wx:if="{userInfo}">
-    <view class="userInfo" style="background-image: url({{userInfo.profile.backgroundUrl}})">
+  <view class="container">
+    <view class="userInfo">
       <view class="userInfoPanel">
         <view class="left">
           <view class="avatar">
@@ -25,10 +25,11 @@
           <view class="handle">更换背景</view>
         </view>
       </view>
+      <view class="modal" style="background-image: url({{userInfo.profile.backgroundUrl}})"></view>
     </view>
     <!-- 用户主页/动态 -->
     <view class="dynamic-container">
-      <van-tabs sticky class="tabs" border swipeable title-active-color="#ee0a24">
+      <van-tabs sticky class="tabs" border swipeable title-active-color="#ee0a24" line-width="100rpx">
         <!-- 主页 -->
         <van-tab title="主页" class="tab home" name="home">
           <view class="tab-home-container">
@@ -76,12 +77,12 @@
             <view class="songLists create">
               <view class="title-container">
                 <text class="title">创建的歌单</text>
-                <text class="numbers">({{createSongLists.length}}个，被收藏3次)</text>
+                <text class="numbers">({{songListCategory.creator.total}}个，被收藏{{songListCategory.creator.subscribedCount}}次)</text>
               </view>
               <view class="list-container">
                 <view class="list-item">
-                  <block wx:if="{{createSongLists.length && createSongLists.length >= 0}}">
-                    <songList wx:for="{{createSongLists}}" wx:key="id" imgSrc="{{item.coverImgUrl}}"
+                  <block wx:if="{{songListCategory.creator.list.length >= 0}}">
+                    <songList wx:for="{{songListCategory.creator.list}}" wx:key="id" wx:if="{{index < 7}}" imgSrc="{{item.coverImgUrl}}"
                       name="{{item.name}}" playCount="{{item.playCount}}" trackCount="{{item.trackCount}}" />
                   </block>
                   <view class="noListsContainer" wx:else>
@@ -90,18 +91,18 @@
                   </view>
                 </view>
               </view>
-              <view class="moreLists" wx:if="{{createSongLists.length && createSongLists.length > 7}}">更多歌单</view>
+              <view class="moreLists" wx:if="{{songListCategory.creator.list.length > 7}}">更多歌单</view>
             </view>
             <!-- 收藏的歌单 -->
             <view class="songLists collect">
               <view class="title-container">
                 <text class="title">收藏的歌单</text>
-                <text class="numbers">({{collectSongLists.length}}个，被收藏0次)</text>
+                <text class="numbers">({{songListCategory.collect.total}}个)</text>
               </view>
               <view class="list-container">
                 <view class="list-item">
-                  <block wx:if="{{collectSongLists.length && collectSongLists.length >= 0}}">
-                    <songList wx:for="{{collectSongLists}}" wx:key="id" imgSrc="{{item.coverImgUrl}}"
+                  <block wx:if="{{songListCategory.collect.list.length >= 0}}">
+                    <songList wx:for="{{songListCategory.collect.list}}" wx:key="id" wx:if="{{index < 7}}" imgSrc="{{item.coverImgUrl}}"
                       name="{{item.name}}" playCount="{{item.playCount}}" trackCount="{{item.trackCount}}" />
                   </block>
                   <view class="noListsContainer" wx:else>
@@ -109,7 +110,7 @@
                   </view>
                 </view>
               </view>
-              <view class="moreLists" wx:if="{{collectSongLists.length && collectSongLists.length > 7}}">更多歌单</view>
+              <view class="moreLists" wx:if="{{songListCategory.collect.list.length > 7}}">更多歌单</view>
             </view>
           </view>
         </van-tab>
@@ -118,8 +119,5 @@
     </view>
   </view>
 
-  <!-- 无用户信息时显示登录 -->
-  <view wx:else class="noInfo-container">
-    <navigator url="/pages/login/login">登录</navigator>
-  </view>
+  <van-toast id="van-toast" />
 </view>
