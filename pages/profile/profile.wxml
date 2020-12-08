@@ -2,26 +2,28 @@
 <view class="profile">
   <view class="container" wx:if="{userInfo}">
     <view class="userInfo" style="background-image: url({{userInfo.profile.backgroundUrl}})">
-      <view class="left">
-        <view class="avatar">
-          <image src="{{userInfo.profile.avatarUrl}}" class="userAvatar" />
+      <view class="userInfoPanel">
+        <view class="left">
+          <view class="avatar">
+            <image src="{{userInfo.profile.avatarUrl}}" class="userAvatar" />
+          </view>
+          <view class="name">
+            <text>{{userInfo.profile.nickname}}</text>
+          </view>
+          <view class="fans">
+            <text class="desc">关注 {{userInfo.profile.follows}}</text>|
+            <text class="desc">粉丝 {{userInfo.profile.followeds}}</text>
+          </view>
+          <view class="more">
+            <view class="more-item vip">黑胶CNIP</view>
+            <view class="more-item age {{userInfo.profile.gender === 2 ? 'female' : 'male'}}">{{age}}</view>
+            <view class="more-item rank">Lv.{{userInfo.profile.eventCount}}</view>
+          </view>
         </view>
-        <view class="name">
-          <text>{{userInfo.profile.nickname}}</text>
+        <view class="right">
+          <view class="handle">编辑</view>
+          <view class="handle">更换背景</view>
         </view>
-        <view class="fans">
-          <text class="desc">关注 {{userInfo.profile.follows}}</text>|
-          <text class="desc">粉丝 {{userInfo.profile.followeds}}</text>
-        </view>
-        <view class="more">
-          <view class="more-item vip">黑胶CNIP</view>
-          <view class="more-item age {{userInfo.profile.gender === 2 ? 'female' : 'male'}}">{{age}}</view>
-          <view class="more-item rank">Lv.{{userInfo.profile.eventCount}}</view>
-        </view>
-      </view>
-      <view class="right">
-        <view class="handle">编辑</view>
-        <view class="handle">更换背景</view>
       </view>
     </view>
     <!-- 用户主页/动态 -->
@@ -79,7 +81,8 @@
               <view class="list-container">
                 <view class="list-item">
                   <block wx:if="{{createSongLists.length && createSongLists.length >= 0}}">
-                    <songList wx:for="{{createSongLists}}" wx:key="id" imgSrc="{{item.coverImgUrl}}" name="{{item.name}}" playCount="{{item.playCount}}" trackCount="{{item.trackCount}}"/>
+                    <songList wx:for="{{createSongLists}}" wx:key="id" imgSrc="{{item.coverImgUrl}}"
+                      name="{{item.name}}" playCount="{{item.playCount}}" trackCount="{{item.trackCount}}" />
                   </block>
                   <view class="noListsContainer" wx:else>
                     <view class="title">无创建的歌单</view>
@@ -98,7 +101,8 @@
               <view class="list-container">
                 <view class="list-item">
                   <block wx:if="{{collectSongLists.length && collectSongLists.length >= 0}}">
-                    <songList wx:for="{{collectSongLists}}" wx:key="id" imgSrc="{{item.coverImgUrl}}" name="{{item.name}}" playCount="{{item.playCount}}" trackCount="{{item.trackCount}}"/>
+                    <songList wx:for="{{collectSongLists}}" wx:key="id" imgSrc="{{item.coverImgUrl}}"
+                      name="{{item.name}}" playCount="{{item.playCount}}" trackCount="{{item.trackCount}}" />
                   </block>
                   <view class="noListsContainer" wx:else>
                     <view class="title">无收藏的歌单</view>
