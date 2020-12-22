@@ -16,7 +16,7 @@
           </view>
           <view class="more">
             <view class="more-item vip">黑胶CNIP</view>
-            <view class="more-item age {{userInfo.profile.gender === 2 ? 'female' : 'male'}}">{{age}}</view>
+            <view class="more-item age {{gender}}">{{age}}</view>
             <view class="more-item rank">Lv.{{userInfo.profile.eventCount}}</view>
           </view>
         </view>

@@ -1,11 +1,12 @@
 <!--pages/profile/childcpns/songList.wxml-->
 <!-- 歌曲item -->
+<wxs module="filter" src='./songList.wxs'></wxs>
 <view class="songList">
   <view class="imgContainer">
     <image class="img" src="{{imgSrc}}"/>
   </view>
   <view class="textContainer">
     <view class="title">{{name}}</view>
-    <view class="desc">{{trackCount}}首，播放{{playCount}}次</view>
+    <view class="desc">{{trackCount}}首，播放{{filter.getPlayCount(playCount)}}次</view>
   </view>
 </view>

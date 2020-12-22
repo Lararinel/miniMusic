@@ -4,7 +4,8 @@
   "description": "development version of mini music",
   "main": "app.js",
   "dependencies": {
-    "@vant/weapp": "^1.6.1"
+    "@vant/weapp": "^1.6.1",
+    "miniprogram-computed": "^2.2.0"
   },
   "devDependencies": {},
   "scripts": {

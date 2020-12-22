@@ -33,6 +33,14 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    getPlayCount(count) {
+      if(count < 10000) {
+        return count
+      }
+      if(count < 100000000) {
+        return `${(count / 10000).toFixed(1)}万`
+      }
+      return `${(count / 100000000)}亿`
+    }
   }
 })
