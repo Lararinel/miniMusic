@@ -45,7 +45,8 @@
     "van-toast": "@vant/weapp/toast/index",
     "van-sticky": "@vant/weapp/sticky/index",
     "van-tabs": "@vant/weapp/tabs/index",
-    "van-tab": "@vant/weapp/tab/index"
+    "van-tab": "@vant/weapp/tab/index",
+    "van-button": "@vant/weapp/button/index"
   },
   "sitemapLocation": "sitemap.json"
 }

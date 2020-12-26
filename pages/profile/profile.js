@@ -22,7 +22,6 @@ Page({
         subscribedCount: 0
       }
     },
-
   },
   behaviors: [computedBehavior],
   computed: {
@@ -69,15 +68,24 @@ Page({
       this.setData({
         userInfo
       })
-    }
-    // console.log(userInfo);
-    this._getData();
+      this._getData();
+    } else return
   },
   async _getData() {
     this.getRadio();
     this.getUserSongLists();
   },
-  
+  login() {
+    wx.navigateTo({
+      url: '../login/login',
+    })
+  },
+  logout() {
+    wx.reLaunch({
+      url: '../login/login',
+    })
+    wx.clearStorageSync()
+  },
   // ----------网络请求----------------
   async getRadio() {
     try {
@@ -87,7 +95,7 @@ Page({
       const userRadio = await getUserRadio(uid); //这里返回用户创建的电台信息，但实际返回的数据中没有页面所需数据
       // console.log(userRadio);
     } catch (error) {
-      console.log('未获取到用户信息');
+      console.log('error');
     }
   },
   async getUserSongLists(page = 1) {
@@ -115,7 +123,7 @@ Page({
       })
 
     } catch (error) {
-
+      console.log('error')
     }
   },
   

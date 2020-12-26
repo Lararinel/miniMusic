@@ -254,3 +254,20 @@
   top: 5rpx;
   right: 20rpx;
 }
+.logout {
+  margin: 20rpx 50rpx;
+}
+.noUserInfo {
+  display: flex;
+  flex-direction: column;
+  transform: translateY(50%);
+  margin: 0 20rpx;
+}
+.noUserInfo .login {
+  margin-bottom: 20rpx;
+}
+.noUserInfo .img {
+  width: 100%;
+}
+
+
