@@ -1,2 +1,11 @@
-<!--pages/cart/cart.wxml-->
-<text>pages/radio/radio.wxml</text>
+<view class="radio-container">
+	<!-- 电台tabs -->
+	<van-tabs sticky title-active-color="#ee0a24">
+		<van-tab title="推荐">	
+            <radioList title="{{recommendTitle}}" lists="{{$.recommendRadios}}"/>
+        </van-tab>
+
+		<van-tab title="分类">内容 2</van-tab>
+	</van-tabs>
+    <van-toast id="van-toast"/>
+</view>

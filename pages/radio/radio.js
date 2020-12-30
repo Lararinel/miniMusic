@@ -1,66 +1,33 @@
-// pages/cart/cart.js
-Page({
+import create from '../../utils/create'
+import store from '../../store/index.js'
 
-  /**
-   * 页面的初始数据
-   */
+import Toast from '@vant/weapp/toast/toast';
+
+import { fetchRecommendRadios, fetchRadioTypes } from '../../service/radio/radio.js'
+
+create(store, {
   data: {
-
+    recommendTitle: ''  //推荐电台标题
+  },
+  use: ['recommendRadios'],
+  onLoad: function() {
+    this._getData()
+  },
+  async _getData() {
+    this.getRecommendRadios()
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  // ---------数据请求--------------
+  async getRecommendRadios() {
+    const result = await fetchRecommendRadios()
+    if(result.code === 200) {
+      this.store.data.recommendRadios = result.djRadios
+      const radioTitle = result.name
+      this.setData({
+        recommendTitle: radioTitle
+      })
+    } else {
+      Toast.fail('请求电台失败')
+    }
   }
 })

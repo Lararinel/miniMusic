@@ -1,0 +1,26 @@
+<view class="radioListContainer">
+	<view class="top">
+		<view class="radioTitle">
+			{{title}}
+		</view>
+		<view class="more" wx:if="lists.length > 6">
+			更多 >
+		</view>
+	</view>
+	<view class="contents">
+		<block wx:for="{{lists}}" wx:key="id">
+			<view class="list-item">
+				<image src="{{item.picUrl}}" class="radioPic"/>
+                <view class="playCount">
+                    <i>i</i>
+                    <text>30万次</text>
+                </view>
+                <view class="desc">
+                    {{item.name}}
+                </view>
+			</view>
+		</block>
+	</view>
+
+
+</view>

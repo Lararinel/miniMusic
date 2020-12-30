@@ -111,22 +111,25 @@
 							<view class="moreLists" wx:if="{{songListCategory.collect.list.length > 7}}">更多歌单</view>
 						</view>
 					</view>
+					<!-- 退出按钮 -->
+          <view class="logout">
+            <van-button color="#ff5777" plain block bindtap="logout">退出登录</van-button>
+          </view>
 				</van-tab>
 				<!-- 用户动态 -->
 				<van-tab title="动态" class="tab dynamic" name="dynamic" info="8">内容 2</van-tab>
 			</van-tabs>
 		</view>
-		<!-- 退出按钮 -->
-		<van-button color="#ff5777" class="logout" plain block bindtap="logout">退出登录</van-button>
+
 	</view>
 	<van-toast id="van-toast" />
 </view>
 <!-- 无用户信息时 -->
 <view wx:else>
 	<view class="noUserInfo">
-    <van-button color="#f55777" class="login" block bindtap="login">去登录</van-button>
-    <view>
-      <image src="../../assets/images/profile/noUserBackground.jpg" class="img" mode="scaleToFill"/>
-    </view>
+		<van-button color="#f55777" class="login" block bindtap="login">去登录</van-button>
+		<view>
+			<image src="../../assets/images/profile/noUserBackground.jpg" class="img" mode="scaleToFill" />
+		</view>
 	</view>
 </view>

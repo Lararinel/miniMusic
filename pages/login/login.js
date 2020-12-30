@@ -50,6 +50,12 @@ Page({
       wx.setStorageSync('userInfo', res);
       wx.switchTab({
         url: '/pages/profile/profile',
+        success() {
+          const currentPage = getCurrentPages().pop();
+          if(currentPage) {
+            currentPage.onLoad();
+          }
+        }
       })
     } catch (error) {
       Toast({

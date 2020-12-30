@@ -255,7 +255,7 @@
   right: 20rpx;
 }
 .logout {
-  margin: 20rpx 50rpx;
+  margin: 20rpx 40rpx;
 }
 .noUserInfo {
   display: flex;
