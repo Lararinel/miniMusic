@@ -1,3 +1,4 @@
+<wxs src="../../../../wxs/index.wxs" module="tools"></wxs>
 <view class="radioListContainer">
 	<view class="top">
 		<view class="radioTitle">
@@ -8,19 +9,19 @@
 		</view>
 	</view>
 	<view class="contents">
-		<block wx:for="{{lists}}" wx:key="id">
+		<block wx:for="{{lists}}" wx:key="id" wx:if="{{index < max}}">
 			<view class="list-item">
-				<image src="{{item.picUrl}}" class="radioPic"/>
-                <view class="playCount">
-                    <i>i</i>
-                    <text>30万次</text>
-                </view>
-                <view class="desc">
-                    {{item.name}}
-                </view>
+				<view class="list-item-cover">
+					<image src="{{item.picUrl}}" class="radioPic" mode="widthFix"/>
+					<view class="playCount">
+						<iconfont icon="bofang"></iconfont>
+						<text>{{tools.getPlayCount(item.playCount)}}</text>
+					</view>
+				</view>
+				<view class="desc">
+					{{item.name}}
+				</view>
 			</view>
 		</block>
 	</view>
-
-
 </view>

@@ -13,3 +13,22 @@ export function fetchRadioTypes() {
         url: '/dj/catelist'
     })
 }
+
+// 获取今日优选电台
+export function fetchOptimRadios() {
+    return request({
+        url: '/dj/today/perfered'
+    })
+}
+/**
+ * 获取付费精选电台
+ * @param {*} params limit, offset
+ */
+export function fetchPaygiftRadios(params) {
+    return request({
+        url: '/dj/paygift',
+        data: params
+    })
+}
+
+

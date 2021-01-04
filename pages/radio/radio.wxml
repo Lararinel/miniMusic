@@ -1,8 +1,16 @@
 <view class="radio-container">
 	<!-- 电台tabs -->
 	<van-tabs sticky title-active-color="#ee0a24">
-		<van-tab title="推荐">	
-            <radioList title="{{recommendTitle}}" lists="{{$.recommendRadios}}"/>
+		<van-tab title="推荐">
+			<!-- 精选电台 -->
+            <radioList title="{{recommendTitle}}" lists="{{$.recommendRadios}}" max="6"/>
+			<!-- 今日优选 -->
+			<radioList title="今日优选" lists="{{$.optimRadios}}" max="3"/>
+			<!-- 付费精选 -->
+			<radioList title="付费精选" lists="{{$.paygiftRadios}}" max="3"/>
+			<!-- 排行榜 -->
+			
+			  
         </van-tab>
 
 		<van-tab title="分类">内容 2</van-tab>

@@ -8,6 +8,10 @@ Component({
     lists: {
       type: Array,
       value: []
+    },
+    max: {
+      type: Number,
+      value: 3
     }
   },
   data: {

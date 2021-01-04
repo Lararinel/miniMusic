@@ -46,7 +46,8 @@
     "van-sticky": "@vant/weapp/sticky/index",
     "van-tabs": "@vant/weapp/tabs/index",
     "van-tab": "@vant/weapp/tab/index",
-    "van-button": "@vant/weapp/button/index"
+    "van-button": "@vant/weapp/button/index",
+    "iconfont": "minapp-iconfont"
   },
   "sitemapLocation": "sitemap.json"
 }

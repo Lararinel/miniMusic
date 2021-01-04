@@ -5,6 +5,7 @@
   "main": "app.js",
   "dependencies": {
     "@vant/weapp": "^1.6.1",
+    "minapp-iconfont": "0.0.3",
     "miniprogram-computed": "^2.2.0"
   },
   "devDependencies": {},
