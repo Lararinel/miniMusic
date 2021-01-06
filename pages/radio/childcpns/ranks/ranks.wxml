@@ -1,13 +1,24 @@
 <!--pages/radio/childcpns/ranks/ranks.wxml-->
 <view class="ranks">
-    <view class="title-container">
-        <view class="title">
-            排行榜
-        </view>
-        <view class="more">
-            更多 >
-        </view>
-    </view>
-    
+	<view class="title-container">
+		<view class="title">
+			排行榜
+		</view>
+		<view class="more">
+			更多 >
+		</view>
+	</view>
+	<view class="ranks-category">
+		<swiper style="height: 520rpx;">
+			<swiper-item class="item" item-id="0">
+				<rank-item rankTitle="节目榜" rankLists="{{hourPlays}}"/>
+			</swiper-item>
+			<swiper-item class="item" item-id="1">
+				<rank-item rankTitle="主播榜" />
+			</swiper-item>
+			<swiper-item class="item" item-id="2">
+				<rank-item rankTitle="电台榜" />
+			</swiper-item>
+		</swiper>
+	</view>
 </view>
-  

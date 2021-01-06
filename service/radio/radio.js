@@ -30,5 +30,15 @@ export function fetchPaygiftRadios(params) {
         data: params
     })
 }
+/**
+ * 
+ * @param {*} params limit
+ */
+export function fetchHourPlays(params) {
+    return request({
+        url: '/dj/program/toplist/hours',
+        data: params
+    })
+}
 
 

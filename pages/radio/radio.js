@@ -3,13 +3,13 @@ import store from '../../store/index.js'
 
 import Toast from '@vant/weapp/toast/toast';
 
-import { fetchRecommendRadios, fetchOptimRadios, fetchPaygiftRadios } from '../../service/radio/radio.js'
+import { fetchRecommendRadios, fetchOptimRadios, fetchPaygiftRadios, fetchHourPlays } from '../../service/radio/radio.js'
 
 create(store, {
   data: {
     recommendTitle: ''  //推荐电台标题
   },
-  use: ['recommendRadios', 'optimRadios', 'paygiftRadios'],
+  use: ['recommendRadios', 'optimRadios', 'paygiftRadios', 'hourPlays'],
   onLoad: function() {
     this._getData()
   },
@@ -17,6 +17,7 @@ create(store, {
     this.getRecommendRadios()
     this.getOptimRadios()
     this.getPaygiftRadios()
+    this.getHourPlays()
   },
 
   // ---------数据请求--------------
@@ -50,6 +51,15 @@ create(store, {
     } else {
       Toast.fail('请求付费精选失败')
     }
-  }
+  },
+  async getHourPlays() {
+    const result = await fetchHourPlays()
+    if(result.code === 200) {
+      //this.store.data.hourPlays = result.data.list
+      this.store.set(this.store.data, 'hourPlays', result.data.list)
+    } else {
+      Toast.fail('请求24小时节目榜失败')
+    }
+  },
 
 })

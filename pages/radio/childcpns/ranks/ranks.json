@@ -1,4 +1,6 @@
 {
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "rank-item": "../rank-item/rank-item"
+  }
 }
