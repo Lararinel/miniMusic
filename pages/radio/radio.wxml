@@ -9,8 +9,7 @@
 			<!-- 付费精选 -->
 			<radioList title="付费精选" lists="{{$.paygiftRadios}}" max="3"/>
 			<!-- 排行榜 -->
-			
-			  
+			<ranks />
         </van-tab>
 
 		<van-tab title="分类">内容 2</van-tab>

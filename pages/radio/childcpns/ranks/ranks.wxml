@@ -1,0 +1,13 @@
+<!--pages/radio/childcpns/ranks/ranks.wxml-->
+<view class="ranks">
+    <view class="title-container">
+        <view class="title">
+            排行榜
+        </view>
+        <view class="more">
+            更多 >
+        </view>
+    </view>
+    
+</view>
+  

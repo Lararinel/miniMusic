@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "radioList": "./childcpns/radioList/radioList"
+    "radioList": "./childcpns/radioList/radioList",
+    "ranks": "./childcpns/ranks/ranks"
   },
   "navigationBarTitleText": "博客电台"
 }

@@ -1,0 +1,19 @@
+.ranks {
+  margin: 0 30rpx;
+}
+.ranks .title-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ranks .title-container .title {
+  font-size: 30rpx;
+  font-weight: 700;
+}
+.ranks .title-container .more {
+  font-size: 22rpx;
+  border: 1px solid #ccc;
+  padding: 6rpx 12rpx;
+  box-sizing: border-box;
+  border-radius: 40rpx;
+}
