@@ -1,0 +1,60 @@
+.item-container {
+    margin: 20rpx 4rpx;
+    // border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px #b6afaf;
+    border-radius: 20rpx;
+    .rankTitle {
+        text-align: center;
+        font-weight: 600;
+        padding-top: 10rpx;
+        box-sizing: border-box;
+    }
+    .item-ranks {
+        margin-top: 20rpx;
+        overflow: hidden;
+        .list {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding:0 15rpx 15rpx;
+            .picCover {
+                //margin-left: 10rpx;
+                width: 100rpx;
+                height: 100rpx;
+                flex-grow: 0;
+                flex-shrink: 0;
+                .img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 20rpx;
+                }
+            }
+            .list-desc {
+                margin-left: 10rpx;
+                display: flex;
+                align-items: center;
+                flex: 1;
+                overflow: hidden;
+                .descItem {
+                    padding-left: 20rpx;
+                    font-size: 28rpx;
+                }
+                .rankNum {
+                    font-weight: 600;
+                }
+                .author {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    max-width: 15vw;
+                }
+            }
+            .rankIcon {
+                font-size: 24rpx;
+                color: green;
+            }
+        }
+    }
+    
+}

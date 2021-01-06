@@ -1,6 +1,7 @@
 {
   "component": true,
   "usingComponents": {
-    "rank-item": "../rank-item/rank-item"
+    "rank-item": "../rank-item/rank-item",
+    "rank-dj": "../rank-dj/rank-dj"
   }
 }

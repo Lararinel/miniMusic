@@ -31,7 +31,7 @@ export function fetchPaygiftRadios(params) {
     })
 }
 /**
- * 
+ * 获取电台最热节目榜
  * @param {*} params limit
  */
 export function fetchHourPlays(params) {
@@ -40,5 +40,30 @@ export function fetchHourPlays(params) {
         data: params
     })
 }
+/**
+ * 获取电台最热主播榜
+ * @param {*} params limit
+ */
+export function fetchPopularDj(params) {
+    return request({
+        url: '/dj/toplist/popular',
+        data: params
+    })
+}
+
+/**
+ * 获取热门电台榜
+ * @param {*} params 
+ * limit: 返回数量
+ * offset：偏移数量
+ * type: hot
+ */
+export function fetchRadioToplists(params) {
+    return request({
+        url: '/dj/toplist',
+        data: params
+    })
+}
+
 
 

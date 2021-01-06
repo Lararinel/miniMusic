@@ -3,5 +3,5 @@
     "radioList": "./childcpns/radioList/radioList",
     "ranks": "./childcpns/ranks/ranks"
   },
-  "navigationBarTitleText": "博客电台"
+  "navigationBarTitleText": "播客电台"
 }

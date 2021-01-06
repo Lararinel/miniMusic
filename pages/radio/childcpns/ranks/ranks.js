@@ -3,7 +3,7 @@ import create from '../../../../utils/create';
 
 
 create.Component({
-  use: ['hourPlays'],
+  use: ['hourPlays', 'popularDj', 'radioToplists'],
   properties: {
 
   },
