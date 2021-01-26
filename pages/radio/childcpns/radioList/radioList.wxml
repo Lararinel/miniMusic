@@ -15,7 +15,8 @@
 					<image src="{{item.picUrl}}" class="radioPic" mode="widthFix"/>
 					<view class="playCount">
 						<iconfont icon="bofang"></iconfont>
-						<text>{{tools.getPlayCount(item.playCount)}}</text>
+						<text wx:if="{{item.playCount}}">{{tools.getPlayCount(item.playCount)}}</text>
+						<text wx:else>{{tools.getPlayCount(item.programCount)}}</text>
 					</view>
 				</view>
 				<view class="desc">

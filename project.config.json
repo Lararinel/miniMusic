@@ -50,12 +50,6 @@
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {
-    "search": {
-      "list": []
-    },
-    "conversation": {
-      "list": []
-    },
     "plugin": {
       "list": []
     },
@@ -85,6 +79,12 @@
           "id": -1,
           "name": "电台",
           "pathName": "pages/radio/radio",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "首页",
+          "pathName": "pages/home/home",
           "scene": null
         }
       ]

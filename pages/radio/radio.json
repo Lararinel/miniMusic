@@ -1,7 +1,8 @@
 {
   "usingComponents": {
     "radioList": "./childcpns/radioList/radioList",
-    "ranks": "./childcpns/ranks/ranks"
+    "ranks": "./childcpns/ranks/ranks",
+    "playPane": "../../components/playPane/playPane"
   },
   "navigationBarTitleText": "播客电台"
 }

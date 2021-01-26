@@ -28,6 +28,9 @@ create(store, {
     this.getPopularDj()
     this.getRadioToplists()
   },
+  onReachBottom() {
+    this._getData()
+  },
 
   // ---------数据请求--------------
   async getRecommendRadios() {

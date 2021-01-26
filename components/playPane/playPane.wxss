@@ -1,0 +1,40 @@
+.paneContainer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  height: 80rpx;
+  width: 100vw;
+  border-top: 1px solid #ddd;
+}
+.paneContainer .panes {
+  display: flex;
+}
+.paneContainer .panes .leftPane {
+  display: flex;
+  flex: 0.7;
+  padding-left: 20rpx;
+  align-items: center;
+}
+.paneContainer .panes .leftPane .item.pic {
+  padding-right: 20rpx;
+}
+.paneContainer .panes .leftPane .item.pic .songPic {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.paneContainer .panes .leftPane .songName {
+  font-size: 28rpx;
+  color: #000;
+}
+.paneContainer .panes .leftPane .singer {
+  font-size: 24rpx;
+  color: #ccc;
+}
+.paneContainer .panes .rightPane {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex: 0.3;
+}

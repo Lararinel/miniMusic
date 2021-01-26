@@ -2,7 +2,7 @@
 .backTop {
   position: fixed;
   right: 16rpx;
-  bottom: 10rpx;
+  bottom: 30rpx;
 }
 .backTopIcon {
   width: 90rpx;

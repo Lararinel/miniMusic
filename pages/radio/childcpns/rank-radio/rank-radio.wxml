@@ -1,4 +1,4 @@
-<!--pages/radio/childcpns/rank-dj/rank-dj.wxml-->
+<!--pages/radio/childcpns/rank-radio/rank-radio.wxml-->
 <view class="item-container">
 	<view class="rankTitle">
 		{{rankTitle}} >
@@ -7,13 +7,14 @@
 		<block wx:for="{{rankLists}}" wx:key="rank" wx:if="{{index < 3}}">
 			<view class="list">
 				<view class="picCover">
-					<image src="{{item.avatarUrl}}" class="img" />
+					<image src="{{item.picUrl}}" class="img" />
 				</view>
 				<view class="list-desc">
 					<text class="descItem rankNum">{{item.rank}}</text>
-					<text class="descItem author">{{item.nickName}}</text>
+					<text class="descItem rankWords">{{item.name}}</text>
+					<text class="descItem author">{{item.creatorName}}</text>
 				</view>
-				<text class="descItem rankIcon">-</text>
+				<text class="descItem rankIcon">新</text>
 			</view>
 		</block>
 	</view>

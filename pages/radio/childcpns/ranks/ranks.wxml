@@ -9,7 +9,7 @@
 		</view>
 	</view>
 	<view class="ranks-category">
-		<swiper style="height: 520rpx;">
+		<swiper style="height: 520rpx;" next-margin="40rpx">
 			<swiper-item class="item" item-id="0">
 				<rank-item rankTitle="节目榜" rankLists="{{hourPlays}}"/>
 			</swiper-item>
@@ -17,7 +17,7 @@
 				<rank-dj rankTitle="主播榜" rankLists="{{popularDj}}"/>
 			</swiper-item>
 			<swiper-item class="item" item-id="2">
-				<!-- <rank-radio rankTitle="电台榜" /> -->
+				<rank-radio rankTitle="电台榜" rankLists="{{radioToplists}}"/>
 			</swiper-item>
 		</swiper>
 	</view>

@@ -1,4 +1,4 @@
-// pages/radio/childcpns/rank-dj/rank-dj.js
+// pages/radio/childcpns/rank-radio/rank-radio.js
 Component({
   /**
    * 组件的属性列表

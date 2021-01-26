@@ -1,17 +1,13 @@
-// pages/radio/childcpns/rank-dj/rank-dj.js
+// components/playPane/playPane.js
 Component({
   /**
    * 组件的属性列表
    */
   properties: {
-      rankLists: {
-        type: Array,
-        value: []
-      },
-      rankTitle: {
-        type: String,
-        value: ''
-      }
+    isShow: {
+      type: Boolean,
+      value: true
+    }
   },
 
   /**

@@ -1,0 +1,27 @@
+<!--components/playPane/playPane.wxml-->
+<!-- 底部浮窗播放组件 -->
+<view class="paneContainer">
+	<view class="panes">
+		<view class="leftPane">
+			<view class="item pic">
+				<image src="../../assets/images/profile/likeSongs.png" class="songPic"/>
+			</view>
+			<view class="item">
+				<text class="songName">baby blue - </text>
+				<text class="singer">lorem lorem</text>
+			</view>
+		</view>
+		<view class="rightPane">
+			<view class="item audioContainer">
+				<audio>
+					<view class="playControl">
+						<iconfont icon="bofang"></iconfont>
+					</view>
+				</audio>
+			</view>
+			<view class="item">
+				<iconfont icon="list-v2"></iconfont>
+			</view>
+		</view>
+	</view>
+</view>

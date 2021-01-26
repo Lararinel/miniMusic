@@ -5,7 +5,8 @@
     "album-list": "./childcpns/album-list/album-list",
     "songlist-tags": "./childcpns/songlist-tags/songlist-tags",
     "song-lists": "./childcpns/song-lists/song-lists",
-    "back-top": "./childcpns/backTop/back-top"
+    "back-top": "./childcpns/backTop/back-top",
+    "playPane": "../../components/playPane/playPane"
   },
   "navigationBarTitleText": "音乐"
 }
