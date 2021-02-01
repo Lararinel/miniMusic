@@ -1,5 +1,4 @@
 Component({
-  behaviors: [],
   properties: {
     title: {
       type: String,
@@ -12,25 +11,10 @@ Component({
     max: {
       type: Number,
       value: 3
+    },
+    layout: {
+      type: String,
+      value: 'vertical'
     }
-  },
-  data: {
-  },
-  lifetimes: {
-    created() {
-
-    },
-    attached() {
-
-    },
-    moved() {
-
-    },
-    detached() {
-
-    },
-  },
-  methods: {
-
   },
 });

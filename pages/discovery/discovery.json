@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "radioList": "../radio/childcpns/radioList/radioList",
+    "swiperPanel": "./components/swiperPanel/swiperPanel"
+  },
+  "navigationBarTitleText": "发现"
 }

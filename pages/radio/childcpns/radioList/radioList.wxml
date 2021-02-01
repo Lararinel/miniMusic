@@ -1,28 +1,22 @@
 <wxs src="../../../../wxs/index.wxs" module="tools"></wxs>
 <view class="radioListContainer">
-	<view class="top">
-		<view class="radioTitle">
-			{{title}}
+		<view class="top">
+				<view class="radioTitle">{{title}}</view>
+				<view class="more" wx:if="lists.length > 6">更多 ></view>
 		</view>
-		<view class="more" wx:if="lists.length > 6">
-			更多 >
+		<view class="contents contents-{{layout}}">
+				<block wx:for="{{lists}}" wx:key="id" wx:if="{{index < max}}">
+						<view class="list-item">
+								<view class="list-item-cover">
+										<image src="{{item.picUrl}}" class="radioPic" mode="widthFix" />
+										<view class="playCount">
+												<iconfont icon="bofang"></iconfont>
+												<text wx:if="{{item.playCount}}">{{tools.getPlayCount(item.playCount)}}</text>
+												<text wx:else>{{tools.getPlayCount(item.programCount)}}</text>
+										</view>
+								</view>
+								<view class="desc">{{item.name}}</view>
+						</view>
+				</block>
 		</view>
-	</view>
-	<view class="contents">
-		<block wx:for="{{lists}}" wx:key="id" wx:if="{{index < max}}">
-			<view class="list-item">
-				<view class="list-item-cover">
-					<image src="{{item.picUrl}}" class="radioPic" mode="widthFix"/>
-					<view class="playCount">
-						<iconfont icon="bofang"></iconfont>
-						<text wx:if="{{item.playCount}}">{{tools.getPlayCount(item.playCount)}}</text>
-						<text wx:else>{{tools.getPlayCount(item.programCount)}}</text>
-					</view>
-				</view>
-				<view class="desc">
-					{{item.name}}
-				</view>
-			</view>
-		</block>
-	</view>
 </view>

@@ -30,14 +30,6 @@
 .radioListContainer .contents .list-item .list-item-cover {
   position: relative;
 }
-.radioListContainer .contents .list-item:nth-child(3n+1) {
-  padding-left: 0;
-  padding-right: 20rpx;
-}
-.radioListContainer .contents .list-item:nth-child(3n+3) {
-  padding-left: 20rpx;
-  padding-right: 0;
-}
 .radioListContainer .contents .list-item .radioPic {
   width: 100%;
   border-radius: 10rpx;
@@ -54,5 +46,27 @@
 }
 .radioListContainer .contents .list-item .desc {
   font-size: 24rpx;
-  text-align: center;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  align-content: center;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.radioListContainer .contents-vertical:nth-child(3n+1) {
+  padding-left: 0;
+  padding-right: 20rpx;
+}
+.radioListContainer .contents-vertical:nth-child(3n+3) {
+  padding-left: 20rpx;
+  padding-right: 0;
+}
+.radioListContainer .contents-horizontal {
+  flex-direction: row;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+.radioListContainer .contents-horizontal .list-item {
+  flex: 0 0 32%;
 }

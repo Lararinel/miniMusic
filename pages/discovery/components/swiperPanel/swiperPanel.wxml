@@ -1,0 +1,29 @@
+<!-- components/swiperPanel/swiperPanel.wxml -->
+<wxs src="/utils/utils.wxs" module="utils" />
+<view>
+  <view class="header">
+    <text class="subTitle">{{subTitle}}</text>
+    <view class="title-bar">
+      <text class="title">{{title}}</text>
+      <button>▶ {{buttonText}}</button>
+    </view>
+  </view>
+  <view class="container">
+    <swiper next-margin="40rpx">
+      <swiper-item wx:for="{{list}}" class="item" wx:for-item="list_tab" wx:for-index="list_tab_index" wx:key="{{list_tab_index}}" item-id="{{list_tab_index}}">
+        <view class="item" wx:for="{{list_tab.resources}}" wx:key="{{index}}">
+          <image src="{{item.uiElement.image.imageUrl}}" />
+          <view class="info">
+            <view class="title-wrap">
+              <text class="title">{{utils.substring(item.uiElement.mainTitle.title)}}</text>
+              <text class="name">- {{utils.substring(item.resourceExtInfo.artists[0].name)}}</text>
+            </view>
+            <text wx:if="{{item.uiElement.subTitle}}" class="subtitle">
+              {{item.uiElement.subTitle.title}}
+            </text>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

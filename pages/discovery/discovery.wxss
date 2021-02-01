@@ -1,1 +1,47 @@
-/* pages/category/category.wxss */
+.container {
+  background-color: #EEE;
+}
+.section {
+  background-color: #FFF;
+  margin-bottom: 16rpx;
+  border-radius: 16rpx;
+}
+.section.none-top-radius {
+  border-radius: 0 0 16rpx 16rpx;
+}
+.section.none-bottom-radius {
+  border-radius: 16rpx 16rpx 0 0;
+}
+.padding24 {
+  padding: 24rpx;
+}
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  overflow-y: auto;
+  border-bottom: 1rpx solid #F5F5F5;
+}
+.nav-bar .nav-item {
+  display: flex;
+  flex-direction: column;
+  margin-left: 24rpx;
+  padding: 16rpx 0;
+}
+.nav-bar .nav-item:last-child {
+  padding-right: 24rpx;
+}
+.nav-bar .nav-item .nav-icon {
+  width: 15vw;
+  height: 15vw;
+  margin-bottom: 8rpx;
+  background-color: #F5F5F5;
+  border-radius: 50%;
+  background: linear-gradient(#f00, #f00);
+  background-blend-mode: overlay;
+  background-size: cover;
+}
+.nav-bar .nav-item text {
+  font-size: 13px;
+  text-align: center;
+  color: #333;
+}

@@ -1,2 +1,17 @@
-<!--pages/category/category.wxml-->
-
+<!-- pages/category/category.wxml -->
+<view class="container">
+  <view class="section none-top-radius">
+    <view class="nav-bar">
+      <view wx:for="{{navList}}" wx:key="id" class="nav-item">
+        <view class="nav-icon" style="background-image:url({{item.iconUrl}}),linear-gradient(220deg,#e0c9c9, #f70909)"></view>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+    <!-- 推荐歌单 -->
+    <radioList title="推荐歌单" lists="{{recommendedplaylist}}" max="6" layout="horizontal" />
+  </view>
+  <view class="section padding24 none-bottom-radius">
+    <swiperPanel title="{{customizeData.subTitle.title}}" subTitle="{{customizeData.mainTitle.title}}" buttonText="{{customizeData.button.text}}" list="{{customizeData.list}}" />
+  </view>
+  <van-toast id="van-toast" />
+</view>
